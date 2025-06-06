@@ -3,3 +3,116 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+.header__rec {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: var(--decor-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items : center;
+  padding: 0 10px;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+}
+
+.header__rec::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: calc(50%);
+  display: inline-block;
+  margin-left: 10px;
+  background: var(--decor-color);
+  box-shadow: 0 0 4px 4px var(--decor-color);
+}
+
+.header__theme-menu {
+  justify-self: self-end;
+  color: var(--decor-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  all: unset;
+}
+
+.header__theme-menu-list {
+  justify-items: end;
+}
+
+.header__title {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--secondary-color);
+  text-shadow: 4px 4px 0 var(--decor-color);
+}
+
+.header__subtitle {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--primary-color);
+}
+
+.title-decor {
+  background-color: var(--decor-color);
+}
+
+.header::after {
+  content: '';
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  left: 10px;
+}
+
+.line-break {
+  display: block;
+}
+
+.footer {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
