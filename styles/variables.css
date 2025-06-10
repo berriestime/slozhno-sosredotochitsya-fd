@@ -5,6 +5,10 @@
 
 :root {
   --decor-color: #ff0070;
-  --primary-color: #000028;
-  --secondary-color: #DB00FF;
+  --main-bg-color: #000028;
+  --decor-secondary-color: #db00ff;
+  --main-text-color: #f1b2ce;
+  --bg-image: url("../images/cover-image-dark.png");
+  --font-regular: "IBM Plex mono", sans-serif;
+  --font-size: 18px;
 }
