@@ -9,9 +9,43 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --color-bg: #000028;
+  --color-text: #f1b2ce;
+  --color-text-decoreted: #ff0070;
+  --color-text-subtitle: #000028;
+  --color-accent: #ff0070;
+  --color-decor-secondary: #db00ff;
+  --color-frames: #ff0070;
+  --color-text-menu: #ff0070;
+  --color-btn-hover: rgba(255, 0, 112, 0.4);
+  --text-shadow-accent: 4px 4px 0 var(--color-accent);
+  --box-shadow-accent: 0 0 4px 4px var(--color-accent);
 }
 
 .theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  background-image: url("../images/cover-image-dark.png");
+  --cover-image: url("../images/cover-image-dark.png");
+}
+
+.theme-dark .header__rec {
+  display: inline-flex;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #000028;
+    --color-text: #f1b2ce;
+    --color-text-decoreted: #ff0070;
+    --color-text-subtitle: #000028;
+    --color-accent: #ff0070;
+    --color-decor-secondary: #db00ff;
+    --color-frames: #ff0070;
+    --color-text-menu: #ff0070;
+    --color-btn-hover: rgba(255, 0, 112, 0.4);
+    --text-shadow-accent: 4px 4px 0 var(--color-accent);
+    --box-shadow-accent: 0 0 4px 4px var(--color-accent);
+  }
+
+  .header__rec {
+    display: fleinline-flex;
+  }
 }

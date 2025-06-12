@@ -9,8 +9,45 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --color-accent: #ff8dcb;
+  --color-bg: #fff1f7;
+  --color-decor-secondary: #ffc2e6;
+  --color-text: #353430;
+  --color-text-decoreted: #353430;
+  --color-frames: #353535;
+  --color-text-menu: #353535;
+  --color-btn-hover: rgba(50, 49, 45, 0.4);
+  --text-shadow-accent: 4px 4px 0 var(--color-accent);
+  --box-shadow-accent: 0 0 4px 4px var(--color-accent);
 }
 
 .theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  --cover-image: url("../images/cover-image-light.png");
+}
+
+.theme-light .header__rec {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-accent: #ff8dcb;
+    --color-bg: #fff1f7;
+    --color-decor-secondary: #ffc2e6;
+    --color-text: #353430;
+    --color-text-decoreted: #353430;
+    --color-frames: #353535;
+    --color-text-menu: #353535;
+    --color-btn-hover: rgba(50, 49, 45, 0.4);
+    --text-shadow-accent: 4px 4px 0 var(--color-accent);
+    --box-shadow-accent: 0 0 4px 4px var(--color-accent);
+  }
+
+  .page {
+    --cover-image: url("../images/cover-image-light.png");
+  }
+
+  .header__rec {
+    display: none;
+  }
 }
