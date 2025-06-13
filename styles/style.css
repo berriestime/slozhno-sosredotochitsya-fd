@@ -24,24 +24,24 @@
   padding: 10px;
 }
 
-.decorated-zone::before {
+.decorated-zone::before,
+.decorated-zone::after {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
   width: 25px;
   height: 25px;
+}
+
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
   border-top: 1px solid var(--color-frames);
   border-inline-end: 1px solid var(--color-frames);
 }
 
 .decorated-zone::after {
-  content: "";
-  position: absolute;
   bottom: 10px;
   left: 10px;
-  width: 25px;
-  height: 25px;
   border-bottom: 1px solid var(--color-frames);
   border-left: 1px solid var(--color-frames);
 }
@@ -132,6 +132,7 @@
   margin-block-end: 10px;
 }
 
+/* Отступ для параграфов кроме последнего */
 .reason__item .reason__item-description:not(:last-child) {
   margin-block-end: 20px;
 }
@@ -159,10 +160,6 @@
   margin-block-end: 20px;
   color: var(--color-text-decoreted);
   font-weight: bold;
-}
-
-.section:last-child .reason__item:last-child {
-  margin-block-start: 50px;
 }
 
 .reason__list > .reason__item:last-child {
@@ -252,37 +249,29 @@
   .main {
     gap: 80px;
     margin-block-start: 60px;
-  }
-
-  .section:nth-child(odd) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
     padding: 0 10px;
   }
 
-  .section:nth-child(even) {
+  .section {
     display: grid;
+    gap: 20px;
+  }
+
+  .section-column {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .section-row {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 20px;
-    padding: 0 10px;
   }
 
-  .section:nth-child(even) > :is(h1, h2):first-child {
-    grid-column: 1;
-  }
-
-  .section:nth-child(even) > .reason:nth-child(2) {
+  .section-row > .reason {
     grid-column: 1 / -1;
     grid-row: 2;
   }
 
-  .section:last-child .reason__item:last-child {
-    margin-block-start: 80px;
-  }
-
-  .section:last-child {
+  .section-gallery {
     display: block;
   }
 
@@ -363,15 +352,15 @@
     font-size: var(--hero-font-size-desktop);
   }
 
-  .section:nth-child(odd) {
+  .section-column {
     gap: 10px;
   }
 
-  .section:nth-child(even) {
+  .section-row {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  .section:nth-child(even) > :is(h1, h2):first-child {
+  .section-row > .section__title {
     grid-column: 1 / span 2;
   }
 
