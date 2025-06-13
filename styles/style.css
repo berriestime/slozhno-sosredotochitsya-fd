@@ -221,7 +221,7 @@
   padding: 0 10px;
 }
 
-@media (width > 768px) {
+@media (width >= 768px) {
   .header {
     padding: 20px 20px 20px 0;
   }
@@ -278,10 +278,6 @@
     display: block;
   }
 
-  .section:last-child .reason__item:last-child {
-    margin-block-start: 80px;
-  }
-
   .section__title {
     margin-block-end: 0px;
   }
@@ -335,7 +331,7 @@
   }
 }
 
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .header {
     align-items: unset;
     padding-block-start: 20px;
