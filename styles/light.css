@@ -14,6 +14,7 @@
   --color-decor-secondary: #ffc2e6;
   --color-text: #353430;
   --color-text-decoreted: #353430;
+  --color-text-subtitle: #353430;
   --color-frames: #353535;
   --color-text-menu: #353535;
   --color-btn-hover: rgba(50, 49, 45, 0.4);
@@ -36,6 +37,7 @@
     --color-decor-secondary: #ffc2e6;
     --color-text: #353430;
     --color-text-decoreted: #353430;
+    --color-text-subtitle: #353430;
     --color-frames: #353535;
     --color-text-menu: #353535;
     --color-btn-hover: rgba(50, 49, 45, 0.4);
