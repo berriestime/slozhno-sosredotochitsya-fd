@@ -231,19 +231,19 @@
     padding: 20px 20px 20px 0;
   }
 
-  .header::before {
+  .decorated-zone::before {
     top: 20px;
     right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
   }
 
   .header__rec {
     top: 20px;
     right: 30px;
-  }
-
-  .header::after {
-    bottom: 20px;
-    left: 20px;
   }
 
   .main {
@@ -257,16 +257,17 @@
     gap: 20px;
   }
 
-  .section-column {
+  .section--focus-problems,
+  .section--focus-tips {
     grid-template-columns: 1fr 2fr;
   }
 
-  .section-row {
+  .section--focus-killers {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
   }
 
-  .section-row > .reason {
+  .section--focus-killers > .reason {
     grid-column: 1 / -1;
     grid-row: 2;
   }
@@ -316,16 +317,6 @@
   .footer {
     margin-block-start: 60px;
   }
-
-  .footer::before {
-    top: 20px;
-    right: 20px;
-  }
-
-  .footer::after {
-    bottom: 20px;
-    left: 20px;
-  }
 }
 
 @media (width >= 1024px) {
@@ -352,19 +343,20 @@
     font-size: var(--hero-font-size-desktop);
   }
 
-  .section-column {
+  .section--focus-problems,
+  .section--focus-tips {
     gap: 10px;
   }
 
-  .section-row {
+  .section--focus-killers {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  .section-row > .section__title {
+  .section--focus-killers > .section__title {
     grid-column: 1 / span 2;
   }
 
-  .section__what .reason__list {
+  .section--focus-killers .reason__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
